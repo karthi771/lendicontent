@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f5f6f8;
+            padding: 20px;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+        .welcome-text {
+            font-size: 24px;
+            font-weight: normal;
+        }
+
+        .user-id {
+            font-size: 20px;
+            margin-top: 5px;
+        }
+
+        .profile-icon {
+            width: 40px;
+            height: 40px;
+            background-color: #0066cc;
+            border-radius: 8px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+
+        .section-title {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .quick-access {
+            background-color: white;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 30px;
+            min-height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+        }
+
+        .explore-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 20px;
+        }
+
+        .explore-item {
+            background-color: white;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .explore-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .icon {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 10px;
+        }
+
+        .icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .item-label {
+            color: #333;
+            font-size: 16px;
+        }
+
+        .menu-button {
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    
+
+    <section>
+        <h2 class="section-title">Quick Access</h2>
+        <div class="quick-access">
+            No items to show
+        </div>
+    </section>
+
+    <section>
+        <h2 class="section-title">Explore</h2>
+        <div class="explore-grid">
+            <div class="explore-item" onclick="handleClick('content')">
+                <div class="icon">
+                   <a href="semster selection.html" class="img"><img src="C:\Users\saite\Downloads\pexels-judit-peter-281675-1766604.jpg" alt="Content icon" /></a>
+                </div>
+                <div class="item-label">Content</div>
+            </div>
+            <div class="explore-item" onclick="handleClick('links')">
+                <div class="icon">
+                    <img src="C:\Users\saite\Downloads\link_1323734.png" alt="Links icon" />
+                </div>
+                <div class="item-label">Links</div>
+            </div>
+            <div class="explore-item" onclick="handleClick('about')">
+                <div class="icon">
+                    <img src="C:\Users\saite\Downloads\person.png" alt="About icon" />
+                </div>
+                <div class="item-label">About</div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function handleClick(section) {
+            console.log(`Navigating to ${section} section`);
+            // Add navigation logic here
+        }
+    </script>
+</body>
+</html>
